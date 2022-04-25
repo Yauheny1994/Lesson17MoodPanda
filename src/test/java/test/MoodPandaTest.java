@@ -4,8 +4,7 @@ import model.User;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class MoodPandaTest extends BaseTest{
-
+public class MoodPandaTest extends BaseTest {
 
     private String rating = "9";
 
@@ -15,7 +14,7 @@ public class MoodPandaTest extends BaseTest{
         dashboardPage = loginPage.openLoginPage()
                 .login(user)
                 .clickYourDashboardLink()
-                .setupRatting(rating)
+                .setupRating(rating)
                 .clickUpdateButton();
         Assert.assertTrue(dashboardPage.isSuccessMessageDisplayed());
     }
